@@ -17,7 +17,7 @@
              Fabric.js doesn't know where to draw. -->
     <div id="canvas-container" class="over">
     <div class="canvas-container" style="width: 800px; height: 600px; position: relative; -webkit-user-select: none;">
-        <canvas id="c" width="800" height="600"></canvas>
+        <canvas id="c" width="800" height="600" style="border: 1px solid;"></canvas>
     </div>
 </div>
 		
@@ -26,15 +26,14 @@
 <script>
 // create a wrapper around native canvas element (with id="c")
 var canvas = new fabric.Canvas('c');
-var text = new fabric.Text('Hello',{
+var text = new fabric.IText('Hello',{
         top:200,
         left:100,   
     })  
 
     
     canvas.add(text);
-    canvas.renderAll();
-
+    
 
 </script>
         
