@@ -1,0 +1,100 @@
+<html>
+<head> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script>
+    $(document).ready(function() {
+    $("#strike").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'line-through';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        $("#italic").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['fontWeight'] = 'italic';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+                $("#underline").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'underline';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="createstyle.css">
+</head>
+
+<body>
+<div class="divs">
+<p style="text-align:left;" class="buttons"><a href=""> write</a></p>
+<p style="text-align:right;" class="buttons"><a href="drafts.html">drafts</a></p>
+       </div>
+    
+    <div class="divs" id="middle" style="width:100%;">
+<canvas id="c" height="250px" width="250px" style="border:1px solid black; " ></canvas>
+        
+        </div>
+    <div class="divs" id="panel">
+    
+    <input type="button" class="pButtons" id="italic"/>
+        <input type="button" class="pButtons" id="strike" />
+        <input type="button" class="pButtons" id="underline" />
+
+    </div>
+    <div class="divs" id="bottom">
+<p class="buttons"><a href="">delete</a></p>
+<p class="buttons" ><a href="">save</a></p>
+<p class="buttons" style="display: inline;"><a href="">submit</a></p>
+    </div>
+    <div class="divs" id="needhelp">
+<p class="buttons"><a href="">need help?</a></p>
+        </div>
+
+</body>
+    <script>
+    var canvas = new fabric.Canvas('c');
+
+
+var iText1 = new fabric.IText('yo wassza',{fontSize: 50});
+var by = new fabric.Text('by',{right:10,bottom:10});
+
+
+canvas.add(iText1);
+canvas.add(by);
+
+
+    </script>
+</html>
