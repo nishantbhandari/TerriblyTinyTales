@@ -1,0 +1,53 @@
+<html> 
+
+<head>
+    
+    
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function() {
+    $("#underline").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'line-through';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        });
+    </script>
+</head>
+
+
+<body>
+    <button id="underline">underline</button>
+<canvas id="c1" width="550" height="500" style="border:1px solid;"></canvas>
+
+   <script>
+    var canvas = new fabric.Canvas('c1');
+
+
+var iText1 = new fabric.IText('yo wassza', {
+  left: 10,
+  top: 20,
+  fill: '#333'
+});
+
+canvas.add(iText1);
+
+
+
+
+    </script>
+</body>
+
+</html>

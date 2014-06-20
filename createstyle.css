@@ -1,7 +1,3 @@
-<html>
-<head> 
-<meta name="viewport" content="width=320" />
-<style>
     html,body{
     width:100%;
         height:100%;
@@ -79,32 +75,3 @@ background-size: 100%;
     resize:both;
     height:80px;
 }
-    </style>
-</head>
-
-<body>
-    <div class="divs" id="top">
-<p style="text-align:left;" class="buttons"><a href=""> write</a></p>
-<p style="text-align:right;" class="buttons"><a href="">drafts</a></p>
-        </div>
-    
-    <div class="divs" id="middle">
-<canvas id="c" style="border:1px solid black;" ></canvas>
-        </div>
-    <div class="divs" id="panel">
-    
-    <input type="button" class="pButtons" id="italic"/>
-        <input type="button" class="pButtons" id="strike" />
-        <input type="button" class="pButtons" id="underline" />
-    </div>
-    <div class="divs" id="bottom">
-<p class="buttons"><a href="">delete</a></p>
-<p class="buttons" ><a href="">save</a></p>
-<p class="buttons" style="display: inline;"><a href="">submit</a></p>
-    </div>
-    <div class="divs" id="needhelp">
-<p class="buttons"><a href="">need help?</a></p>
-        </div>
-
-</body>
-</html>
