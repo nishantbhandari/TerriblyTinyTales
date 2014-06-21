@@ -4,8 +4,19 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="loginstyle.css">
-<script type="text/javascript"> function AssignValues() { sessionStorage.setItem("Text", document.form1.Text.value); sessionStorage.setItem("email", document.form1.email.value); }
-function Value1() { alert("Value 1 is " + sessionStorage.getItem("Text")); }
+<script type="text/javascript">
+    function AssignValues() {
+        window.localStorage.setItem("name", document.form1.name.value); 
+        window.localStorage.setItem("email", document.form1.email.value); 
+         window.location = "create.html"
+    }
+    if(window.localStorage.getItem("name")){
+    window.location = "create.html"
+    
+    
+    }
+   
+
 
 
 </script>
@@ -18,7 +29,7 @@ function Value1() { alert("Value 1 is " + sessionStorage.getItem("Text")); }
 <form name="form1">
 <div id="login"> 
     <h1 class="loginL"> name</h1>
-    <input type="text" name="Text" class="loginT" />
+    <input type="text" name="name" class="loginT" />
     <h1 class="loginL"> email</h1>
     <input type="email" name="email" class="loginT" />
 
@@ -28,8 +39,8 @@ function Value1() { alert("Value 1 is " + sessionStorage.getItem("Text")); }
  
 </div>
 <div id="accept">
-<<<<<<< HEAD
-    <p><a onClick="AssignValues()" href="create.html" class="loginB">accept</a></p>
+
+    <p><a href="javascript:AssignValues();" class="loginB">accept</a></p>
   
     </div>
 </form>
