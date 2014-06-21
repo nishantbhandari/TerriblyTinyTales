@@ -1,28 +1,38 @@
 <html> 
 
 <head>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="loginstyle.css">
+<script type="text/javascript"> function AssignValues() { sessionStorage.setItem("Text", document.form1.Text.value); sessionStorage.setItem("email", document.form1.email.value); }
+function Value1() { alert("Value 1 is " + sessionStorage.getItem("Text")); }
+
+
+</script>
+
+
+
 </head>
 
 <body> 
-
+<form name="form1">
 <div id="login"> 
     <h1 class="loginL"> name</h1>
     <input type="text" name="Text" class="loginT" />
     <h1 class="loginL"> email</h1>
-    <input type="text" name="email" class="loginT" />
-    
+    <input type="email" name="email" class="loginT" />
+
+
+
 
  
 </div>
 <div id="accept">
 <<<<<<< HEAD
-    <p><a href="create.html" class="loginB">accept</a></p>
-=======
-    <p><a href="index1.html" class="loginB">accept</a></p>
->>>>>>> FETCH_HEAD
+    <p><a onClick="AssignValues()" href="create.html" class="loginB">accept</a></p>
+  
     </div>
+</form>
 </body>
 
 
