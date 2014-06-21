@@ -43,7 +43,7 @@ a:active {
         display: inline;
         font-family: HNUL;
     
-        text-decoration: none;
+      text-decoration: none;
     }
     .divs{
         position:relative;
@@ -59,7 +59,7 @@ background-size: 100%;
     resize:both;
     height:80px;
 }
-    #strike{
+#strike{
   
 background: url('images/strike.png');
 background-size: 100%;
@@ -67,7 +67,7 @@ background-size: 100%;
     resize:both;
     height:80px;
 }
-    #underline{
+ #underline{
   
 background: url('images/underline.png');
 background-size: 100%;
@@ -76,13 +76,14 @@ background-size: 100%;
     height:80px;
 }
 #c{
-width: 100%;
-height:400px;
-border: 1px solid black;    
+border:1px solid black; 
+background:url('images/background.png');
+
 }
+
 #middle{
-position: absolute;
-width: 100%;
-left:2px; 
-right:2px;
+
+        width:100%;
+        height: auto;
+    text-align: center;
 }
