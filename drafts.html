@@ -9,6 +9,21 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <meta name="viewport" content="width=320" />
 <style>
+     nav {
+        display: hidden;
+      height: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: opacity .5s ease-in;
+      padding: 0 15px;
+      background-color: #ffffff;
+      border-bottom: solid 1px #a7a7aa;
+      padding: 1px 0;
+    }
+        nav > h1 {
+      text-align: center;
+      font: normal 14pt/17pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
+    }
 html, body {
       padding: 0;
       margin: 0;
@@ -127,7 +142,10 @@ text-align: center;
 </head>
 
 <body>
-            <ul class="menu">
+           <nav>
+    <h1>Terribly Tiny Tales</h1>
+  </nav>
+    <ul class="menu">
         <li><a href="layout.html">write</a></li>
         <li><a href="#"></a></li>
             <li><a href="#"></a></li>
