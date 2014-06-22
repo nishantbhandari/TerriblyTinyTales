@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-<!--   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="msapplication-tap-highlight" content="no">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
@@ -129,10 +129,27 @@ text-align: center;
   </article>
 </body>
 <script>
+
+	
+	
+
+
 var canvas = new fabric.Canvas('c');
+
+// browser viewport size
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+
+	// stage dimensions
+	var ow = 720; // your stage width
+	var oh = 540; // your stage height
+    	// keep aspect ratio
+	    var scale = Math.min(w / ow, h / oh);
+
+	   	// adjust canvas size
     
-canvas.setWidth(720);
-canvas.setHeight(540);    
+canvas.setWidth(ow * scale);
+canvas.setHeight(oh * scale);    
 
 var width = canvas.getWidth();
 var heigth= canvas.getHeight();    
