@@ -128,17 +128,21 @@ text-align: center;
 var canvas = new fabric.Canvas('c');
     
 canvas.setWidth(window.innerWidth);
-canvas.setHeight(540);    
+canvas.setHeight(window.innerHeight);    
 
+var width = canvas.getWidth();
+var heigth= canvas.getHeight();    
 var author= window.localStorage.getItem("name");
-var iText1 = new fabric.IText('Enter Text',{left:250,top:200,minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
-var by = new fabric.Text('by '+author,{left:600,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var ttt = new fabric.Text('terribly tiny tales',{left:250,top:505,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var hash=new fabric.IText('#smile',{left:10,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var number=new fabric.IText('#000',{left:660,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var iText1 = new fabric.IText('Enter Text',{minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
+var by = new fabric.Text('by '+author,{left:width-100,top:heigth-45,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var ttt = new fabric.Text('terribly tiny tales',{left:width-250,top:heigth-50,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var hash=new fabric.IText('#smile',{right:width,top:heigth-45,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var number=new fabric.IText('#000',{left:width-50,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
 
 
-
+canvas.centerObject(iText1);
+canvas.centerObjectH(ttt);
+canvas.calcOffset();
 canvas.setBackgroundColor('black');
 canvas.add(iText1);
 canvas.add(by);
@@ -146,8 +150,12 @@ canvas.add(ttt);
 canvas.add(hash);
 canvas.add(number);
 canvas.renderAll.bind(canvas);
+var canvasimg = document.getElementById("c");
 
-//alert(img);
+var img = canvasimg.toDataURL("image/png");
+alert(img);
+
+
 
 </script>
 </html>
