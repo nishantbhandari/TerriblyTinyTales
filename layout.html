@@ -92,6 +92,9 @@ text-align: center;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+      #c{
+      width: 100%;
+      }
   </style>
 </head>
 <body>
@@ -101,19 +104,17 @@ text-align: center;
   <article id='main'>
     <section>
             <ul id="menu">
-        <li><a href="#">write</li>
-        <li><a href="#"></li>
-            <li><a href="#"></li>
-                <li><a href="#">drafts</li>
+        <li><a href="#">write</a></li>
+        <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+                <li><a href="#">drafts</a></li>
     </ul>
-	<br />
-
-<canvas id="c" style="border:1px solid black;margin:0px;" width="100%"></canvas>
-<div  id="container" width="100%">
-</div>            <ul id="menu2">
-        <li><a href="#">delete</li>
-         <li><a href="#">save</li>
-        <li><a href="#">submit</li>
+	<br /><br />
+<div id="canvas-container" width="100%"><canvas style="display:block; width:100%; height:540px;" id="c"></canvas></div>
+           <ul id="menu2">
+        <li><a href="#">delete</a></li>
+         <li><a href="#">save</a></li>
+        <li><a href="#">submit</a></li>
     </ul>  
         <ul id="menu3">
         <li>
@@ -122,12 +123,12 @@ text-align: center;
         </ul>
     </section>
   </article>
+</body>
 <script>
-
-
 var canvas = new fabric.Canvas('c');
-
-canvas.setWidth($('#container').width());
+    
+canvas.setWidth(window.innerWidth);
+canvas.setHeight(540);    
 
 var author= window.localStorage.getItem("name");
 var iText1 = new fabric.IText('Enter Text',{left:250,top:200,minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
@@ -146,11 +147,7 @@ canvas.add(hash);
 canvas.add(number);
 canvas.renderAll.bind(canvas);
 
-var canvasimg = document.getElementById("c");
-
-var img = canvasimg.toDataURL("image/png");
 //alert(img);
 
 </script>
-</body>
 </html>
