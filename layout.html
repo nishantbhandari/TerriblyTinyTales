@@ -5,6 +5,8 @@
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="msapplication-tap-highlight" content="no">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
   <title>ChUI 3.0</title>
   <style>
     html, body {
@@ -101,7 +103,9 @@ text-align: center;
             <li><a href="#"></li>
                 <li><a href="#">drafts</li>
     </ul>
-<canvas id="c" style="border:1px solid black;width:100%; margin:0px;" height="540px" width="720"></canvas>
+	<br />
+<canvas id="c" style="border:1px solid black;width:100%; margin:0px;"></canvas>
+
             <ul id="menu2">
         <li><a href="#">delete</li>
          <li><a href="#">save</li>
@@ -114,5 +118,34 @@ text-align: center;
         </ul>
     </section>
   </article>
+<script>
+
+
+var canvas = new fabric.Canvas('c');
+canvas.setHeight(540);
+canvas.setWidth(720);
+var author= window.localStorage.getItem("name");
+var iText1 = new fabric.IText('Enter Text',{left:250,top:200,minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
+var by = new fabric.Text('by '+author,{left:600,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var ttt = new fabric.Text('terribly tiny tales',{left:250,top:505,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var hash=new fabric.IText('#smile',{left:10,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var number=new fabric.IText('#000',{left:660,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+
+
+
+canvas.setBackgroundColor('black');
+canvas.add(iText1);
+canvas.add(by);
+canvas.add(ttt);
+canvas.add(hash);
+canvas.add(number);
+canvas.renderAll.bind(canvas);
+
+var canvasimg = document.getElementById("c");
+
+var img = canvasimg.toDataURL("image/png");
+//alert(img);
+
+</script>
 </body>
 </html>
