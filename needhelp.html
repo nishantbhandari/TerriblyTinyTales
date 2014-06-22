@@ -8,6 +8,15 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <meta name="viewport" content="width=320" />
+    <script>
+    
+        function AssignValues() {
+        window.localStorage.setItem("name", document.form1.name.value); 
+        window.localStorage.setItem("email", document.form1.email.value); 
+         window.location = "layout.html"
+    }
+
+    </script>
 <style>
 html, body {
       padding: 0;
