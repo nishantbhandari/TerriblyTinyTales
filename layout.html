@@ -2,11 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="msapplication-tap-highlight" content="no">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script>
+
+    $(document).ready(function() {
+
+    $("#strike").click(function() {
+        var obj = canvas.getActiveObject();
+    
+
+                        
+                    var style = { };
+    style['textDecoration'] = 'line-through';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        $("#italic").click(function() {
+ 
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['fontWeight'] = 'italic';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+                $("#underline").click(function() {
+        
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'underline';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        });
+    </script>
   <title>ChUI 3.0</title>
   <style>
     html, body {
@@ -16,6 +64,36 @@
 	  width:100%;
 	  
     }
+      @font-face {
+    font-family: 'HNUL'; /*a name to be used later*/
+    src: url('HNUL.otf'); /*URL to font*/
+}
+          a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #000;
+        text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+        text-decoration: none;
+
+}
+
+/* selected link */
+a:active {
+    color: #000;
+        text-decoration: none;
+
+}
+ 
     body {
       background-color: #ffffff;
       font: normal 10pt/13pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
@@ -33,7 +111,7 @@
       text-align: center;
       transition: opacity .5s ease-in;
       padding: 0 15px;
-      background-color: #f7f7f7;
+      background-color: #ffffff;
       border-bottom: solid 1px #a7a7aa;
       padding: 1px 0;
     }
@@ -45,6 +123,8 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: HNUL;
+    font-size:25px;
 }
 
 #menu li {
@@ -54,13 +134,40 @@
     width: 25%;
     padding: 10px;
     box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
 }
       #menu2 {
     margin: 0;
     padding: 0;
           text-align: center;
+          font-family: HNUL;
+   font-size:25px;
 }
+#italic{
+  
+background: url('images/italic.png');
+background-size: 100%;
+    width:40px;
 
+    height:40px;
+}
+#strike{
+  
+background: url('images/strike.png');
+background-size: 100%;
+    width:40px;
+
+    height:40px;
+}
+ #underline{
+  
+background: url('images/underline.png');
+background-size: 100%;
+    width:40px;
+
+    height:40px;
+}
 #menu2 li {
     display: block;
     float: right;
@@ -68,13 +175,44 @@
     width: 33%;
     padding: 10px;
     box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
 }
+            #control-menu {
+    margin: 0;
+    padding: 0;
+          text-align: center;
+          font-family: HNUL;
+   font-size:25px;
+}
+
+#control-menu li {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
+
+}
+
           #menu3 {
     margin: 0;
     padding: 0;
 text-align: center;
+              font-family: HNUL;
+              font-size:30px;
 }
 
+      #counter{
+          text-align: center
+          border:0px solid;
+          height:40px;
+          width:40px;
+      outline:none;
+      }
 #menu3 li {
     display: block;
     float: left;
@@ -82,6 +220,8 @@ text-align: center;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
 }
     h2 {
       font: normal 14pt/17pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
@@ -95,10 +235,6 @@ text-align: center;
       #c{
       width: 100%;
       }
-      
-      .canvas-container {
-      	margin: 0 auto;
-      }
   </style>
 </head>
 <body>
@@ -111,29 +247,38 @@ text-align: center;
         <li><a href="#">write</a></li>
         <li><a href="#"></a></li>
             <li><a href="#"></a></li>
-                <li><a href="#">drafts</a></li>
+                <li><a href="drafts.html">drafts</a></li>
     </ul>
-	<br /><br />
-<div id="canvas-container" ><canvas style="display:block; width:720px; height:540px; margin: 0 auto;" id="c"></canvas></div>
+	<br /><br /><br/>
+<canvas style="display:block; width:100%; height:540px; left:0px; right:0px; position:fixed;" id="c"></canvas><br />
+         <ul id="control-menu">
+<li><input type="button" class="pButtons" id="italic" /></li> 
+      <li><input type="button" class="pButtons" id="strike" /></li>
+        <li><input type="button" class="pButtons" id="underline" /></li>
+		 <li><input style="outline:none;" type="text" id="counter" disabled/></li>
+    </ul>  
+<!--
+        <p style="display:inline;"><input type="button" class="pButtons" id="italic" /></p>
+        <p style="display:inline;"><input type="button" class="pButtons" id="strike" /></p>
+        <p style="display:inline;"><input type="button" class="pButtons" id="underline" /></p>
+        <p style="display:inline;"><input type="text" id="counter" /></p>
+        
+-->
+        <br />
            <ul id="menu2">
-        <li><a href="#">delete</a></li>
-         <li><a href="#">save</a></li>
-        <li><a href="#">submit</a></li>
+        <li><a onclick="delete1();">delete</a></li>
+         <li><a href="javascript:savedraft();">save</a></li>
+        <li><a href="mailto:someone@example.com?Subject=Hello%20again">submit</a></li>
     </ul>  
         <ul id="menu3">
         <li>
-        <a href="#">need help?</a></li>
-            </li>
+        <a href="needhelp.html">need help?</a></li>
+            
         </ul>
     </section>
   </article>
 </body>
 <script>
-
-	
-	
-
-
 var canvas = new fabric.Canvas('c');
 
 // browser viewport size
@@ -148,17 +293,22 @@ var canvas = new fabric.Canvas('c');
 
 	   	// adjust canvas size
     
+//
+//canvas.setWidth(window.innerWidth);
+//canvas.setHeight(300);    
+
 canvas.setWidth(ow * scale);
 canvas.setHeight(oh * scale);    
+
 
 var width = canvas.getWidth();
 var heigth= canvas.getHeight();    
 var author= window.localStorage.getItem("name");
-var iText1 = new fabric.IText('Enter Text',{minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
-var by = new fabric.Text('by '+author,{left:width-100,top:heigth-45,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var ttt = new fabric.Text('terribly tiny tales',{left:width-250,top:heigth-50,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var hash=new fabric.IText('#smile',{right:width,top:heigth-45,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
-var number=new fabric.IText('#000',{left:width-50,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var iText1 = new fabric.IText('Enter Text',{minScaleLimit:1,fontSize: 30,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
+var by = new fabric.Text('by '+author,{left:width-100,top:heigth-45,fontSize:15,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var ttt = new fabric.Text('terribly tiny tales',{left:width-250,top:heigth-50,fontSize:18,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var hash=new fabric.IText('#smile',{right:width,top:heigth-45,fontSize:18,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var number=new fabric.IText('#000',{left:width-50,fontSize:18,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
 
 
 canvas.centerObject(iText1);
@@ -171,11 +321,66 @@ canvas.add(ttt);
 canvas.add(hash);
 canvas.add(number);
 canvas.renderAll.bind(canvas);
-var canvasimg = document.getElementById("c");
+document.getElementById('counter').value=iText1.text.length;
+iText1.on('text:changed', function(e) {
+document.getElementById('counter').value=iText1.text.length;
 
-var img = canvasimg.toDataURL("image/png");
+});
+    var cHeight = canvas.getHeight();
+    var cWidth = canvas.getWidth();
 
+    var n1 = 720/cWidth;
+    var n2 = 540/cHeight;
+    
+//alert(n2);
 
+var dataURL = canvas.toDataURL({
+  format: 'png',
+  multiplier: n1
+});
+function delete1()
+{
+	var r=confirm("Are you sure you want to delete this tale/draft?");
+	if(r==true)
+	iText1.text='Enter Text';
+	else console.log(10);
+}
+function savedraft() {
+		
+		var currentdate = new Date();
+		var datetime = currentdate.getDay() + "."+currentdate.getMonth() 
+						+ "." + currentdate.getFullYear() + " - " 
+							+ currentdate.getHours() + "." 
+						+ currentdate.getMinutes() + "." + currentdate.getSeconds(); 
+		var b = localStorage.getItem("id");
+		var z=parseInt(1);
+		if(b)
+		{
+		var a = parseInt(localStorage.getItem("id"));
+		alert(a);
+		
+		window.localStorage.setItem(a+"-diText1", iText1.text);
+		window.localStorage.setItem(a+"-dhash", hash.text); 
+		window.localStorage.setItem(a+"-dnumber", number.text);
+		window.localStorage.setItem(a+"-ddate", datetime);
+		window.localStorage.setItem("id",a + z);	
+		}
+		else
+		{
+		localStorage.setItem("id",0);
+		a = parseInt(localStorage.getItem("id"));
+		alert(a);
+		window.localStorage.setItem(a+"-diText1", iText1.text);
+		window.localStorage.setItem(a+"-dhash", hash.text); 
+		window.localStorage.setItem(a+"-dnumber", number.text);
+		window.localStorage.setItem(a+"-ddate", datetime);
+		window.localStorage.setItem("id",a + z);	
+		}
+		
+	 
+}
+//    document.write("<img src="+dataURL+">");
+    
 
 
 </script>

@@ -95,15 +95,13 @@
 		
 </div>
 </body>
- <script>
+<script>
 
 
 var canvas = new fabric.Canvas('c');
 var author= window.localStorage.getItem("name");
 
 var iText1 = new fabric.IText('Enter Text',{left:250,top:200,minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
-//var counterlen=iText1.text.length;
-//var counter=new fabric.IText(''+counterlen,{fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
 var by = new fabric.Text('by '+author,{left:600,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
 var ttt = new fabric.Text('terribly tiny tales',{left:250,top:505,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
 var hash=new fabric.IText('#smile',{left:10,top:510,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
@@ -113,7 +111,6 @@ var number=new fabric.IText('#000',{left:660,fontSize:20,fill:'white',fontFamily
 
 canvas.setBackgroundColor('black');
 canvas.add(iText1);
-//canvas.add(counter);
 canvas.add(by);
 canvas.add(ttt);
 canvas.add(hash);
@@ -121,14 +118,53 @@ canvas.add(number);
 canvas.renderAll.bind(canvas);
 document.getElementById('counter').value=iText1.text.length;
 iText1.on('text:changed', function(e) {
-document.getElementById('counter').value=iText1.text.length;
+document.getElementById('#counter').value=iText1.text.length;
 
 });
-
-
+function delete1()
+{
+	var r=confirm("Are you sure you want to delete this tale/draft?");
+	if(r==true)
+	iText1.text='Enter Text';
+	else console.log(10);
+}
+function savedraft() {
+		
+		var currentdate = new Date();
+		var datetime = currentdate.getDay() + "."+currentdate.getMonth() 
+						+ "." + currentdate.getFullYear() + " - " 
+							+ currentdate.getHours() + "." 
+						+ currentdate.getMinutes() + "." + currentdate.getSeconds(); 
+		var b = localStorage.getItem("id");
+		var z=parseInt(1);
+		if(b)
+		{
+		var a = parseInt(localStorage.getItem("id"));
+		alert(a);
+		
+		window.localStorage.setItem(a+"-diText1", iText1.text);
+		window.localStorage.setItem(a+"-dhash", hash.text); 
+		window.localStorage.setItem(a+"-dnumber", number.text);
+		window.localStorage.setItem(a+"-ddate", datetime);
+		window.localStorage.setItem("id",a + z);	
+		}
+		else
+		{
+		localStorage.setItem("id",0);
+		a = parseInt(localStorage.getItem("id"));
+		alert(a);
+		window.localStorage.setItem(a+"-diText1", iText1.text);
+		window.localStorage.setItem(a+"-dhash", hash.text); 
+		window.localStorage.setItem(a+"-dnumber", number.text);
+		window.localStorage.setItem(a+"-ddate", datetime);
+		window.localStorage.setItem("id",a + z);	
+		}
+		
+	 
+}
+  
 var canvasimg = document.getElementById("c");
-
 var img = canvasimg.toDataURL("image/png");
-
+//localStorage.clear();
 </script>
 </html>
