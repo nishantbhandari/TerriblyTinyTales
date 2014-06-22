@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>ChUI 3.0</title>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff;
+      font: normal 10pt/13pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
+      -webkit-font-smoothing: subpixel-antialiased;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    article {
+      padding: 40px 0;
+    }
+    nav {
+        display: hidden;
+      height: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: opacity .5s ease-in;
+      padding: 0 15px;
+      background-color: #f7f7f7;
+      border-bottom: solid 1px #a7a7aa;
+      padding: 1px 0;
+    }
+    nav > h1 {
+      text-align: center;
+      font: normal 14pt/17pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
+    }
+#menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#menu li {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+      #menu2 {
+    margin: 0;
+    padding: 0;
+          text-align: center;
+}
+
+#menu2 li {
+    display: block;
+    float: right;
+    margin: 0;
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+          #menu3 {
+    margin: 0;
+    padding: 0;
+text-align: center;
+}
+
+#menu3 li {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+    h2 {
+      font: normal 14pt/17pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
+      color: #4d4d4d;
+      margin: 0 0 20px 15px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Terribly Tiny Tales</h1>
+  </nav>
+  <article id='main'>
+    <section>
+            <ul id="menu">
+        <li><a href="#">write</li>
+        <li><a href="#"></li>
+            <li><a href="#"></li>
+                <li><a href="#">drafts</li>
+    </ul>
+<canvas id="c" style="border:1px solid black;width:100%; margin:0px;" height="540px" width="720"></canvas>
+            <ul id="menu2">
+        <li><a href="#">delete</li>
+         <li><a href="#">save</li>
+        <li><a href="#">submit</li>
+    </ul>  
+        <ul id="menu3">
+        <li>
+        <a href="#">need help?</a></li>
+            </li>
+        </ul>
+    </section>
+  </article>
+</body>
+</html>
