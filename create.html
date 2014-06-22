@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head> 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
@@ -114,4 +115,122 @@ var img = canvasimg.toDataURL("image/png");
 alert(img);
 
 </script>
+=======
+<html>
+<head> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script>
+    $(document).ready(function() {
+    $("#strike").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'line-through';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        $("#italic").click(function() {
+ 
+     
+        
+		alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['fontWeight'] = 'italic';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+                $("#underline").click(function() {
+        
+        
+  alert( "Handler for .click() called." );
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'underline';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());
+        
+});
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="createstyle.css">
+</head>
+
+<body>
+<div id="container" style="max-width:75em;margin:0 auto;">
+<div class="divs" style="float:left;">
+<p style="text-align:left;" class="buttons"><a href=""> write</a></p></div>
+    <div class="divs" style="float: left;">
+<p style="text-align:right;" class="buttons"><a href="drafts.html">drafts</a></p>
+       </div>
+    
+    <div class="divs" id="middle" style="width:100%;">
+<canvas id="c" height="540px" width="720"></canvas>
+        
+        </div>
+    <div class="divs" id="panel">
+    
+    <input type="button" class="pButtons" id="italic"/>
+        <input type="button" class="pButtons" id="strike" />
+        <input type="button" class="pButtons" id="underline" />
+
+    </div>
+    <div class="divs" id="bottom">
+<p class="buttons"><a href="">delete</a></p>
+<p class="buttons" ><a href="">save</a></p>
+<p class="buttons" style="display: inline;"><a href="">submit</a></p>
+    </div>
+    <div class="divs" id="needhelp">
+<p class="buttons"><a href="">need help?</a></p>
+        </div>
+</div>
+</body>
+ <script>
+
+
+var canvas = new fabric.Canvas('c');
+var author= window.localStorage.getItem("name");
+var iText1 = new fabric.IText('Enter Text',{minScaleLimit:1,fontSize: 44,fill:'white',fontFamily:'HNUL',lockScalingX:true,lockScalingY:true,lockRotation:true});
+var by = new fabric.Text('by '+author,{right:'20%',top:220,fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var ttt = new fabric.Text('terribly tiny tales',{left:100,top:220,fontSize:24,fill:'white',fontFamily:'HNUL',useNative: true,lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var hash=new fabric.IText('#Hash',{fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+var number=new fabric.IText('#No',{fontSize:20,fill:'white',fontFamily:'HNUL',lockMovementX: true,lockMovementY: true,lockScalingX:true,lockScalingY:true,lockRotation:true});
+
+
+
+canvas.setBackgroundColor('black');
+canvas.add(iText1);
+canvas.add(by);
+canvas.add(ttt);
+canvas.add(hash);
+canvas.add(number);
+canvas.renderAll.bind(canvas);
+
+var canvasimg = document.getElementById("c");
+
+var img = canvasimg.toDataURL("image/png");
+//alert(img);
+
+</script>
+>>>>>>> FETCH_HEAD
 </html>
