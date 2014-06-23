@@ -8,6 +8,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script src="cordova.js"></script>
     <script>
 
     $(document).ready(function() {
@@ -52,7 +53,7 @@
 //        canvas.renderAll();
 //    console.log(obj.getSelectedText());
                     alert('hey');
-
+window.plugins.socialsharing.share('Message only');
         
 });
         });
@@ -256,7 +257,7 @@ text-align: center;
          <ul id="control-menu">
 <li><input type="button" class="pButtons" id="italic" /></li> 
       <li><input type="button" class="pButtons" id="strike" /></li>
-        <li><input type="button" onclick="window.plugins.socialsharing.share('Message only')" class="pButtons" id="underline" /></li>
+        <li><input type="button" class="pButtons" id="underline" /></li>
 		 <li><input style="outline:none;" type="text" id="counter" disabled/></li>
     </ul>  
 <!--
