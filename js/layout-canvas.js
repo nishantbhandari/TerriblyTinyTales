@@ -30,7 +30,9 @@ var iText1 = new fabric.IText('Enter Text',{
     fontFamily:'HNUL',
     lockScalingX:true,
     lockScalingY:true,
+    fontWeight:'bold',
     lockRotation:true});
+
     
 var by = new fabric.Text('by '+author,{
     left:width-100,
