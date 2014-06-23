@@ -44,16 +44,26 @@ for(i=0;i<a;i++)
 {
 	
 	var text=localStorage.getItem(i+"-diText1");
+	if(text)
+	{
 	var hash=localStorage.getItem(i+"-dhash"); 
 	var number=localStorage.getItem(i+"-dnumber");
 	var date= localStorage.getItem(i+"-ddate");
-
-
-	document.getElementById("middle").innerHTML+=date+"  "+hash+"<br />";
+	var link=document.getElementById("middle");
+	link.innerHTML+="<p id="+i+"><a href='javascript:getdraft("+i+");'>"+date+"  "+hash+"</a></p><br />";
+	}
+	else console.log(10);
+	
 	
 }
 
-
+function getdraft(id)
+{
+	
+	localStorage.setItem("did",id);
+	location.replace("layout.html");
+	
+}
 
 </script>
 </html>

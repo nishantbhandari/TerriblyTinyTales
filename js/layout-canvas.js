@@ -18,10 +18,15 @@ var canvas = new fabric.Canvas('c');
 
 canvas.setWidth(ow * scale);
 canvas.setHeight(oh * scale);    
-
-
 var width = canvas.getWidth();
-var heigth= canvas.getHeight();    
+var heigth= canvas.getHeight();   
+var check = localStorage.getItem("did");
+if(check)
+{
+var dtext=localStorage.getItem(check+"-diText1");
+var dhash=localStorage.getItem(check+"-dhash"); 
+var dnumber=localStorage.getItem(check+"-dnumber");
+var ddate= localStorage.getItem(check+"-ddate");
 var author= window.localStorage.getItem("name");
 var iText1 = new fabric.IText('Enter Text',{
     minScaleLimit:1,
@@ -82,6 +87,69 @@ var number=new fabric.IText('#000',{
     lockScalingY:true,
     lockRotation:true});
     
+}
+else
+{
+var iText1 = new fabric.IText('Enter Text',{
+    minScaleLimit:1,
+    fontSize:30,
+    fill:'white',
+    fontFamily:'HNUL',
+    lockScalingX:true,
+    lockScalingY:true,
+    fontWeight:'bold',
+    lockRotation:true});
+
+    
+var by = new fabric.Text('by '+author,{
+    left:width-100,
+    top:heigth-45,
+    fontSize:15,
+    fill:'white',
+    fontFamily:'HNUL',
+    lockMovementX: true,
+    lockMovementY: true,
+    lockScalingX:true,
+    lockScalingY:true,
+    lockRotation:true});
+    
+var ttt = new fabric.Text('terribly tiny tales',{
+    left:width-250,
+    top:heigth-50,
+    fontSize:18,
+    fill:'white',
+    fontFamily:'HNUL',
+    useNative: true,
+    lockMovementX: true,
+    lockMovementY: true,
+    lockScalingX:true,
+    lockScalingY:true,
+    lockRotation:true});
+    
+var hash=new fabric.IText('#smile',{
+    right:width,
+    top:heigth-45,
+    fontSize:18,
+    fill:'white',
+    fontFamily:'HNUL',
+    lockMovementX: true,
+    lockMovementY: true,
+    lockScalingX:true,
+    lockScalingY:true,
+    lockRotation:true});
+    
+var number=new fabric.IText('#000',{
+    left:width-50,
+    fontSize:18,
+    fill:'white',
+    fontFamily:'HNUL',
+    lockMovementX: true,
+    lockMovementY: true,
+    lockScalingX:true,
+    lockScalingY:true,
+    lockRotation:true});
+    
+}
 
 canvas.centerObject(iText1);
 canvas.centerObjectH(ttt);
@@ -93,8 +161,6 @@ canvas.add(ttt);
 canvas.add(hash);
 canvas.add(number);
 canvas.renderAll.bind(canvas);
-canvas.renderAll();
-
 document.getElementById('counter').value=iText1.text.length;
 iText1.on('text:changed', function(e) {
 document.getElementById('counter').value=iText1.text.length;
@@ -116,9 +182,32 @@ function delete1()
 {
 	var r=confirm("Are you sure you want to delete this tale/draft?");
 	if(r==true)
+	{
 	iText1.text='Enter Text';
+	hash.text='#smile';
+	number.text='#000';
+	var b = localStorage.getItem("did");
+	
+	if(b)
+	{
+		
+		localStorage.removeItem(b+"-diText1");
+		localStorage.removeItem(b+"-dhash");
+		localStorage.removeItem(b+"-dnumber");
+		localStorage.removeItem(b+"-ddate");  
+	}
+	else console.log(10);
+	}
 	else console.log(10);
 }
+
+function newcanvas()
+{
+iText1.text='Enter Text';
+hash.text='#smile';
+number.text='#000';
+}
+
 function savedraft() {
 		
 		var currentdate = new Date();
@@ -132,12 +221,12 @@ function savedraft() {
 		{
 		var a = parseInt(localStorage.getItem("id"));
 		alert(a);
-		
 		window.localStorage.setItem(a+"-diText1", iText1.text);
 		window.localStorage.setItem(a+"-dhash", hash.text); 
 		window.localStorage.setItem(a+"-dnumber", number.text);
 		window.localStorage.setItem(a+"-ddate", datetime);
-		window.localStorage.setItem("id",a + z);	
+		window.localStorage.setItem("id",a + z);
+		window.localStorage.setItem("did",a);	
 		}
 		else
 		{
@@ -148,12 +237,13 @@ function savedraft() {
 		window.localStorage.setItem(a+"-dhash", hash.text); 
 		window.localStorage.setItem(a+"-dnumber", number.text);
 		window.localStorage.setItem(a+"-ddate", datetime);
-		window.localStorage.setItem("id",a + z);	
+		window.localStorage.setItem("id",a + z);
+		window.localStorage.setItem("did",a);
 		}
 		
 	 
 }
-    canvas.setActiveObject(iText1);
 
-    document.write("<img src="+dataURL+" width='720' height='540'>");
-    
+//document.write("<img src="+dataURL+" width='720' height='540'>");
+//localStorage.clear():
+//localStorage.clear():
