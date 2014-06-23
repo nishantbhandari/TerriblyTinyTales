@@ -30,15 +30,15 @@
 });
                 $("#underline").click(function() {
         
-//        var obj = canvas.getActiveObject();
-//    
-////obj.setFontFamily('Verdana');
-//                        
-//                    var style = { };
-//    style['textDecoration'] = 'underline';
-//    obj.setSelectionStyles(style);
-//                
-//        canvas.renderAll();
-//    console.log(obj.getSelectedText());   
+        var obj = canvas.getActiveObject();
+    
+//obj.setFontFamily('Verdana');
+                        
+                    var style = { };
+    style['textDecoration'] = 'underline';
+    obj.setSelectionStyles(style);
+                
+        canvas.renderAll();
+    console.log(obj.getSelectedText());   
 });
         });
