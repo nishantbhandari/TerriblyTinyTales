@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <widget xmlns = "http://www.w3.org/ns/widgets" 
         xmlns:gap = "http://phonegap.com/ns/1.0"
-		id = "it.venerons.APPLICATION"
+		id = "com.notlikethat.ttt"
 		version = "1.0"
 		versionCode = "1">
 
-    <name>APPLICATION NAME</name>
+    <name>Terribly Tiny Tales</name>
 
     <description>
-        APPLICATION DESCRIPTION
+        by Not Like That
     </description>
 
-    <author href="http://venerons.github.io" email="veneronslaboratories@gmail.com">Daniele Veneroni</author>
-        
-    <!-- ICONS -->
-        
-    
-        
-  
+    <author href="http://github.com/nishantbhandari" email="bhandari.nishant@gmail.com">Nishant Bhandari</author>
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
