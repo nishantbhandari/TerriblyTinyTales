@@ -22,17 +22,18 @@ var width = canvas.getWidth();
 var heigth= canvas.getHeight();   
 var check = localStorage.getItem("did");
 var dtext=localStorage.getItem(check+"-diText1");
-
+var author=localStorage.getItem("name");
+alert(author);
 if(check&&dtext)
 {
 
 var dtext=localStorage.getItem(check+"-diText1");
-
 var dtext=localStorage.getItem(check+"-diText1");
 var dhash=localStorage.getItem(check+"-dhash"); 
 var dnumber=localStorage.getItem(check+"-dnumber");
-var ddate= localStorage.getItem(check+"-ddate");
-var author= window.localStorage.getItem("name");
+var ddate=localStorage.getItem(check+"-ddate");
+
+
 
 var iText1 = new fabric.IText(dtext,{
     minScaleLimit:1,
@@ -119,6 +120,7 @@ var by = new fabric.Text('by '+author,{
     lockScalingY:true,
     lockRotation:true});
     
+
 var ttt = new fabric.Text('terribly tiny tales',{
     left:width-250,
     top:heigth-50,
