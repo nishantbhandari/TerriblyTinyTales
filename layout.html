@@ -73,9 +73,8 @@ window.plugin.email.isServiceAvailable(
     function (isAvailable) {
         window.plugin.email.open({
     subject:     'Cordova Icon',
-    attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/...']
+    attachments: [dataURL]
 });
-        alert("hey");
         // alert('Service is not available') unless isAvailable;
     }
 );   
