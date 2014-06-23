@@ -69,19 +69,16 @@
 //                
 //        canvas.renderAll();
 //    console.log(obj.getSelectedText());
-                    alert('hey');
-window.plugins.socialsharing.shareViaEmail(
-  'Message',
-  'Subject',
-  ['to@person1.com', 'to@person2.com'], // TO: must be null or an array
-  ['cc@person1.com'], // CC: must be null or an array
-  null, // BCC: must be null or an array
-  ['https://www.google.nl/images/srpr/logo4w.png','www/localimage.png'], // FILES: can be null, a string, or an array
-  onSuccess, // called when sharing worked, but also when the user cancelled sharing via email (I've found no way to detect the difference)
-  onError // called when sh*t hits the fan
-);
-
-        
+window.plugin.email.isServiceAvailable(
+    function (isAvailable) {
+        window.plugin.email.open({
+    subject:     'Cordova Icon',
+    attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/...']
+});
+        alert("hey");
+        // alert('Service is not available') unless isAvailable;
+    }
+);   
 });
         });
     </script>
@@ -409,7 +406,7 @@ function savedraft() {
 		
 	 
 }
-    document.write("<img src="+dataURL+" width='720' height='540'>");
+//    document.write("<img src="+dataURL+" width='720' height='540'>");
     
 
 
