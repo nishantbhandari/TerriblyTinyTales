@@ -27,16 +27,8 @@
     // Cordova is loaded and it is now safe to make calls Cordova methods
     //
     function onDeviceReady() {
-        window.plugin.email.isServiceAvailable(
-    function (isAvailable) {
-        window.plugin.email.open({
-    subject:     'Cordova Icon',
-    attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/...']
-});
 
-    }
-);
-        // Now safe to use the Cordova API
+        window.plugins.socialsharing.share(null, 'Android filename', 'data:image/png;base64,R0lGODlhDAAMALMBAP8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUKAAEALAAAAAAMAAwAQAQZMMhJK7iY4p3nlZ8XgmNlnibXdVqolmhcRQA7', null)// Now safe to use the Cordova API
     }
 
     </script>
