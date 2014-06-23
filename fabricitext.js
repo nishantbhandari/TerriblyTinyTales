@@ -135,21 +135,3 @@ addHandler('size', function(obj) {
   setStyle(obj, 'fontSize', parseInt(this.value, 10));
 }, 'onchange');
 
-/*document.getElementById('calc-offset').onclick = function() {
-  canvases.forEach(function(c) {
-    c.calcOffset();
-  });
-};
-
-document.getElementById('set-coords').onclick = function() {
-  canvases.forEach(function(c) {
-    c.getObjects().forEach(function(o) {
-      o.setCoords();
-    })
-  });
-};
-
-document.getElementById('open-keyboard').onclick = function() {
-  document.getElementById('dummy-textarea').focus();
-};
-*/
