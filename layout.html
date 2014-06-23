@@ -53,7 +53,16 @@
 //        canvas.renderAll();
 //    console.log(obj.getSelectedText());
                     alert('hey');
-window.plugins.socialsharing.share('Message only');
+window.plugins.socialsharing.shareViaEmail(
+  'TTT',
+  'Subject',
+  ['bhandari.nishant@gmail.com'], // TO: must be null or an array
+  ['cc@person1.com'], // CC: must be null or an array
+  null, // BCC: must be null or an array
+  [dataURL], // FILES: can be null, a string, or an array
+  onSuccess, // called when sharing worked, but also when the user cancelled sharing via email (I've found no way to detect the difference)
+  onError // called when sh*t hits the fan
+);
         
 });
         });
