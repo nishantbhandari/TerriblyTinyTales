@@ -71,9 +71,10 @@
 //    console.log(obj.getSelectedText());
 window.plugin.email.isServiceAvailable(
     function (isAvailable) {
+alert(dataURL);
         window.plugin.email.open({
     subject:     'Cordova Icon',
-    attachments: ['+'dataURL'+']
+    attachments: [dataURL]
 });
         // alert('Service is not available') unless isAvailable;
     }
