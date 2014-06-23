@@ -30,7 +30,11 @@
     }
         function meMail(){
             alert(2323);
-                window.plugins.socialsharing.share(null, 'Android filename', 'data:image/png;base64,R0lGODlhDAAMALMBAP8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUKAAEALAAAAAAMAAwAQAQZMMhJK7iY4p3nlZ8XgmNlnibXdVqolmhcRQA7', null);// Now safe to use the Cordova API
+            var dataURL = canvas.toDataURL({
+  format: 'png',
+  multiplier: n1
+});
+                window.plugins.socialsharing.share(null, 'Android filename', dataURL, null);// Now safe to use the Cordova API
     }
         
 
