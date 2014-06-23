@@ -41,16 +41,17 @@
 });
                 $("#underline").click(function() {
         
-        var obj = canvas.getActiveObject();
-    
-//obj.setFontFamily('Verdana');
-                        
-                    var style = { };
-    style['textDecoration'] = 'underline';
-    obj.setSelectionStyles(style);
-                
-        canvas.renderAll();
-    console.log(obj.getSelectedText());
+//        var obj = canvas.getActiveObject();
+//    
+////obj.setFontFamily('Verdana');
+//                        
+//                    var style = { };
+//    style['textDecoration'] = 'underline';
+//    obj.setSelectionStyles(style);
+//                
+//        canvas.renderAll();
+//    console.log(obj.getSelectedText());
+                    window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null, null, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})
         
 });
         });
@@ -245,8 +246,6 @@ text-align: center;
     <section>
             <ul id="menu">
         <li><a href="#">write</a></li>
-                <button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null, null, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
-
         <li><a href="#"></a></li>
             <li><a href="#"></a></li>
                 <li><a href="drafts.html">drafts</a></li>
