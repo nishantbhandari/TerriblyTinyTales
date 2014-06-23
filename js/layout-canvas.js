@@ -21,14 +21,20 @@ canvas.setHeight(oh * scale);
 var width = canvas.getWidth();
 var heigth= canvas.getHeight();   
 var check = localStorage.getItem("did");
-if(check)
+var dtext=localStorage.getItem(check+"-diText1");
+
+if(check&&dtext)
 {
+
+var dtext=localStorage.getItem(check+"-diText1");
+
 var dtext=localStorage.getItem(check+"-diText1");
 var dhash=localStorage.getItem(check+"-dhash"); 
 var dnumber=localStorage.getItem(check+"-dnumber");
 var ddate= localStorage.getItem(check+"-ddate");
 var author= window.localStorage.getItem("name");
-var iText1 = new fabric.IText('Enter Text',{
+
+var iText1 = new fabric.IText(dtext,{
     minScaleLimit:1,
     fontSize:30,
     fill:'white',
@@ -64,7 +70,7 @@ var ttt = new fabric.Text('terribly tiny tales',{
     lockScalingY:true,
     lockRotation:true});
     
-var hash=new fabric.IText('#smile',{
+var hash=new fabric.IText(dhash,{
     right:width,
     top:heigth-45,
     fontSize:18,
@@ -76,7 +82,7 @@ var hash=new fabric.IText('#smile',{
     lockScalingY:true,
     lockRotation:true});
     
-var number=new fabric.IText('#000',{
+var number=new fabric.IText(dnumber,{
     left:width-50,
     fontSize:18,
     fill:'white',
