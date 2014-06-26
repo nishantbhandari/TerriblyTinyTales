@@ -103,7 +103,7 @@ else
 {
 var iText1 = new fabric.IText('Enter Text',{
     minScaleLimit:1,
-    fontSize:30,
+    fontSize:18,
     fill:'white',
     fontFamily:'HNUL',
     lockScalingX:true,
@@ -113,9 +113,9 @@ var iText1 = new fabric.IText('Enter Text',{
 
     
 var by = new fabric.Text('by '+author,{
-    left:width-100,
-    top:heigth-45,
-    fontSize:15,
+    left:width-92,
+    top:heigth-35,
+    fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
     lockMovementX: true,
@@ -128,8 +128,8 @@ fontWeight:'bold'});
 
 var ttt = new fabric.Text('terribly tiny tales',{
     left:width-250,
-    top:heigth-50,
-    fontSize:18,
+    top:heigth-35,
+    fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
     useNative: true,
@@ -142,8 +142,8 @@ fontWeight:'bold'});
     
 var hash=new fabric.IText('#smile',{
     right:width,
-    top:heigth-45,
-    fontSize:18,
+    top:heigth-35,
+    fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
     lockMovementX: true,
@@ -155,7 +155,7 @@ fontWeight:'bold'});
     
 var number=new fabric.IText('#000',{
     left:width-50,
-    fontSize:18,
+    fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
     lockMovementX: true,
