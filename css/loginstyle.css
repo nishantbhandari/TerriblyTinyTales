@@ -53,7 +53,9 @@ a:active {
 .loginT{
     text-align: center;
     font-size: 20px;
-font-weight: normal;
+font-weight: normal;      text-align: center;
+      font: normal 14pt/17pt;
+            font-family: HNUL;
 font-family: HNUL;
     height: 30px;
     width:250px;
