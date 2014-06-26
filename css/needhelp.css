@@ -95,7 +95,7 @@ background-size: 100%;
     height:80px;
 }
     .menu {
-font-weight: bold;
+font-weight: normal;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -152,11 +152,11 @@ outline:none;
     .loginL{
   
 font-family: HNUL;
-font-weight: bold;
+font-weight: normal;
 
 }
     .loginB{
-font-weight: bold;
+font-weight: normal;
 font-family: HNUL;
 text-decoration: none;
     font-size: 20px;

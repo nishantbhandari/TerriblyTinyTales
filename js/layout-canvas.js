@@ -113,7 +113,7 @@ var iText1 = new fabric.IText('Enter Text',{
 
     
 var by = new fabric.Text('by '+author,{
-    left:width-82,
+    left:width-80,
     top:heigth-25,
     fontSize:14,
     fill:'white',

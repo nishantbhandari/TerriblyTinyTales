@@ -80,7 +80,7 @@ font-weight: normal;
    font-size:25px;
 }
       #menu2 {
-          font-weight: bold;
+font-weight: normal;
     margin: 0;
     padding: 0;
           text-align: center;
@@ -142,7 +142,7 @@ background-size: 100%;
 }
 
           #menu3 {
-              font-weight: bold;
+font-weight: normal;
     margin: 0;
     padding: 0;
 text-align: center;
