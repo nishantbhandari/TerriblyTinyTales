@@ -23,7 +23,7 @@ var heigth= canvas.getHeight();
 var check = localStorage.getItem("did");
 var dtext=localStorage.getItem(check+"-diText1");
 var author=localStorage.getItem("name");
-alert(author);
+
 if(check&&dtext)
 {
 
@@ -56,7 +56,8 @@ var by = new fabric.Text('by '+author,{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 var ttt = new fabric.Text('terribly tiny tales',{
     left:width-250,
@@ -69,7 +70,8 @@ var ttt = new fabric.Text('terribly tiny tales',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 var hash=new fabric.IText(dhash,{
     right:width,
@@ -81,7 +83,8 @@ var hash=new fabric.IText(dhash,{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 var number=new fabric.IText(dnumber,{
     left:width-50,
@@ -92,7 +95,8 @@ var number=new fabric.IText(dnumber,{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 }
 else
@@ -118,7 +122,8 @@ var by = new fabric.Text('by '+author,{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 
 var ttt = new fabric.Text('terribly tiny tales',{
@@ -132,7 +137,8 @@ var ttt = new fabric.Text('terribly tiny tales',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 var hash=new fabric.IText('#smile',{
     right:width,
@@ -144,7 +150,8 @@ var hash=new fabric.IText('#smile',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 var number=new fabric.IText('#000',{
     left:width-50,
@@ -155,7 +162,8 @@ var number=new fabric.IText('#000',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+fontWeight:'bold'});
     
 }
 
@@ -228,7 +236,7 @@ function savedraft() {
 		if(b)
 		{
 		var a = parseInt(localStorage.getItem("id"));
-		alert(a);
+
 		window.localStorage.setItem(a+"-diText1", iText1.text);
 		window.localStorage.setItem(a+"-dhash", hash.text); 
 		window.localStorage.setItem(a+"-dnumber", number.text);
@@ -240,7 +248,7 @@ function savedraft() {
 		{
 		localStorage.setItem("id",0);
 		a = parseInt(localStorage.getItem("id"));
-		alert(a);
+
 		window.localStorage.setItem(a+"-diText1", iText1.text);
 		window.localStorage.setItem(a+"-dhash", hash.text); 
 		window.localStorage.setItem(a+"-dnumber", number.text);
