@@ -73,8 +73,6 @@
         
         
 
-              <icon src="css/images/Android_LDPI.png" density="ldpi" />
-              <icon src="css/images/Android_MDPI.png" density="mdpi" />
-              <icon src="css/images/Android_HDPI.png" density="hdpi" />
-              <icon src="css/images/Android_XHDPI.png" density="xhdpi" />
+              <icon src="css/images/IOS.png" />
+
 </widget>
