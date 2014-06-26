@@ -113,8 +113,8 @@ var iText1 = new fabric.IText('Enter Text',{
 
     
 var by = new fabric.Text('by '+author,{
-    left:width-92,
-    top:heigth-35,
+    left:width-82,
+    top:heigth-25,
     fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
@@ -128,7 +128,7 @@ fontWeight:'bold'});
 
 var ttt = new fabric.Text('terribly tiny tales',{
     left:width-250,
-    top:heigth-35,
+    top:heigth-25,
     fontSize:14,
     fill:'white',
     fontFamily:'HNUL',
@@ -142,7 +142,7 @@ fontWeight:'bold'});
     
 var hash=new fabric.IText('#smile',{
     right:width,
-    top:heigth-35,
+    top:heigth-25,
     fontSize:14,
     fill:'white',
     fontFamily:'HNUL',

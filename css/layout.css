@@ -61,7 +61,7 @@ a:active {
       font: normal 14pt/17pt HelveticaNeue, SegoeWP, SegoeUI, Roboto, Sans-serif;
     }
 #menu {
-font-weight: 800;
+font-weight: normal;
     margin: 0;
     padding: 0;
     text-align: center;

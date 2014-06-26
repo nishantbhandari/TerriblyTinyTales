@@ -56,12 +56,7 @@
         <preference name="load-url-timeout" value="20000" />
         
     <!-- PHONEGAP API FEATURES PREFERENCES -->
-          <platform name="android">
-              <icon src="css/images/Android_LDPI.png" density="ldpi" />
-              <icon src="css/images/Android_MDPI.png" density="mdpi" />
-              <icon src="css/images/Android_HDPI.png" density="hdpi" />
-              <icon src="css/images/Android_XHDPI.png" density="xhdpi" />
-     </platform>
+
     <preference name="permissions" value="none"/>
     <!--
     <feature name="http://api.phonegap.com/1.0/battery"/>
@@ -78,4 +73,13 @@
         
         
 
+              <icon src="css/images/Android_LDPI.png" density="ldpi" />
+              <icon src="css/images/Android_MDPI.png" density="mdpi" />
+              <icon src="css/images/Android_HDPI.png" density="hdpi" />
+              <icon src="css/images/Android_XHDPI.png" density="xhdpi" />
 </widget>
+
+              <icon src="css/images/Android_LDPI.png" density="ldpi" />
+              <icon src="css/images/Android_MDPI.png" density="mdpi" />
+              <icon src="css/images/Android_HDPI.png" density="hdpi" />
+              <icon src="css/images/Android_XHDPI.png" density="xhdpi" />
