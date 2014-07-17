@@ -109,6 +109,8 @@ var iText1 = new fabric.IText('Enter Text',{
     lockScalingX:true,
     lockScalingY:true,
     fontWeight:'bold',
+        stroke:'white',
+    strokeWidth:1,
     lockRotation:true});
 
     
@@ -122,6 +124,8 @@ var by = new fabric.Text('by '+author,{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
+        stroke:'white',
+    strokeWidth:1,
     lockRotation:true,
 fontWeight:'bold'});
     
@@ -137,6 +141,8 @@ var ttt = new fabric.Text('terribly tiny tales',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
+        stroke:'white',
+    strokeWidth:1,
     lockRotation:true,
 fontWeight:'bold'});
     
@@ -150,6 +156,8 @@ var hash=new fabric.IText('#smile',{
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
+        stroke:'white',
+    strokeWidth:1,
     lockRotation:true,
 fontWeight:'bold'});
     
@@ -161,6 +169,8 @@ var number=new fabric.IText('#000',{
     lockMovementX: true,
     lockMovementY: true,
     lockScalingX:true,
+        stroke:'white',
+    strokeWidth:1,
     lockScalingY:true,
     lockRotation:true,
 fontWeight:'bold'});
