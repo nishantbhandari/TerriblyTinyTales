@@ -114,7 +114,7 @@ else
 {
 var iText1 = new fabric.IText('Enter Text',{
     minScaleLimit:1,
-    fontSize:44,
+    fontSize:18,
     fill:'white',
     stroke:'white',
     strokeWidth:1,
