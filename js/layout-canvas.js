@@ -3,21 +3,23 @@ var canvas = new fabric.Canvas('c');
 // browser viewport size
 	var w = window.innerWidth;
 	var h = window.innerHeight;
-
-	// stage dimensions
+//
+//	// stage dimensions
 	var ow = 720; // your stage width
 	var oh = 540; // your stage height
     	// keep aspect ratio
 	    var scale = Math.min(w / ow, h / oh);
-
-	   	// adjust canvas size
-    
 //
-//canvas.setWidth(window.innerWidth);
-//canvas.setHeight(300);    
+//	   	// adjust canvas size
+//    
+////
+canvas.setWidth(window.innerWidth);
+canvas.setHeight(300);    
 
 canvas.setWidth(ow * scale);
-canvas.setHeight(oh * scale);    
+canvas.setHeight(oh * scale);   
+//canvas.setWidth(720);
+//canvas.setHeight(540);
 var width = canvas.getWidth();
 var heigth= canvas.getHeight();   
 var check = localStorage.getItem("did");
@@ -27,45 +29,51 @@ var author=localStorage.getItem("name");
 if(check&&dtext)
 {
 
-var dtext=localStorage.getItem(check+"-diText1");
+
 var dtext=localStorage.getItem(check+"-diText1");
 var dhash=localStorage.getItem(check+"-dhash"); 
 var dnumber=localStorage.getItem(check+"-dnumber");
 var ddate=localStorage.getItem(check+"-ddate");
-
-
-
+    
 var iText1 = new fabric.IText(dtext,{
     minScaleLimit:1,
-    fontSize:30,
+    fontSize:44,
     fill:'white',
+    stroke:'white',
+    strokeWidth:1,
     fontFamily:'HNUL',
     lockScalingX:true,
     lockScalingY:true,
-    fontWeight:'bold',
     lockRotation:true});
 
     
 var by = new fabric.Text('by '+author,{
-    left:width-100,
-    top:heigth-45,
-    fontSize:15,
+    left:700,
+    top:500,
+    originX:'right',
+   
+    fontSize:20,
     fill:'white',
+       stroke:'white',
+    strokeWidth:1,
     fontFamily:'HNUL',
-    lockMovementX: true,
-    lockMovementY: true,
+    lockMovementX: false,
+    lockMovementY: false,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true,
-fontWeight:'bold'});
+    lockRotation:true
+});
     
+
 var ttt = new fabric.Text('terribly tiny tales',{
-    left:width-250,
-    top:heigth-50,
-    fontSize:18,
+
+    top:heigth-45,
+    fontSize:24,
     fill:'white',
     fontFamily:'HNUL',
     useNative: true,
+       stroke:'white',
+    strokeWidth:1,
     lockMovementX: true,
     lockMovementY: true,
     lockScalingX:true,
@@ -74,109 +82,116 @@ var ttt = new fabric.Text('terribly tiny tales',{
 fontWeight:'bold'});
     
 var hash=new fabric.IText(dhash,{
-    right:width,
-    top:heigth-45,
-    fontSize:18,
+    left:width-700,
+    top:heigth-40,
+    fontSize:20,
     fill:'white',
     fontFamily:'HNUL',
+       stroke:'white',
+    strokeWidth:1,
     lockMovementX: true,
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true,
-fontWeight:'bold'});
+    lockRotation:true
+});
     
 var number=new fabric.IText(dnumber,{
-    left:width-50,
-    fontSize:18,
+    left:width-60,
+    fontSize:20,
     fill:'white',
     fontFamily:'HNUL',
     lockMovementX: true,
     lockMovementY: true,
+       stroke:'white',
+    strokeWidth:1,
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true,
-fontWeight:'bold'});
-    
+    lockRotation:true
+});
 }
 else
 {
 var iText1 = new fabric.IText('Enter Text',{
     minScaleLimit:1,
-    fontSize:18,
+    fontSize:44,
     fill:'white',
+    stroke:'white',
+    strokeWidth:1,
     fontFamily:'HNUL',
     lockScalingX:true,
     lockScalingY:true,
-    fontWeight:'bold',
-        stroke:'white',
-    strokeWidth:0.5,
     lockRotation:true});
 
     
 var by = new fabric.Text('by '+author,{
-    left:width-80,
-    top:heigth-25,
-    fontSize:14,
+    left:700,
+    top:500,
+    originX:'right',
+   
+    fontSize:20,
     fill:'white',
+       stroke:'white',
+    strokeWidth:1,
     fontFamily:'HNUL',
-    lockMovementX: true,
-    lockMovementY: true,
+    lockMovementX: false,
+    lockMovementY: false,
     lockScalingX:true,
     lockScalingY:true,
-        stroke:'white',
-    strokeWidth:0.5,
-    lockRotation:true,
-fontWeight:'bold'});
+    lockRotation:true
+});
     
 
 var ttt = new fabric.Text('terribly tiny tales',{
-    left:width-250,
-    top:heigth-25,
-    fontSize:14,
+
+    top:heigth-45,
+    fontSize:24,
     fill:'white',
     fontFamily:'HNUL',
     useNative: true,
+       stroke:'white',
+    strokeWidth:1,
     lockMovementX: true,
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-        stroke:'white',
-    strokeWidth:0.5,
     lockRotation:true,
 fontWeight:'bold'});
     
 var hash=new fabric.IText('#smile',{
-    right:width,
-    top:heigth-25,
-    fontSize:14,
+    left:width-700,
+    top:heigth-40,
+    fontSize:20,
     fill:'white',
     fontFamily:'HNUL',
+       stroke:'white',
+    strokeWidth:1,
     lockMovementX: true,
     lockMovementY: true,
     lockScalingX:true,
     lockScalingY:true,
-        stroke:'white',
-    strokeWidth:0.5,
-    lockRotation:true,
-fontWeight:'bold'});
+    lockRotation:true
+});
     
 var number=new fabric.IText('#000',{
-    left:width-50,
-    fontSize:14,
+    left:width-60,
+    fontSize:20,
     fill:'white',
     fontFamily:'HNUL',
     lockMovementX: true,
     lockMovementY: true,
+       stroke:'white',
+    strokeWidth:1,
     lockScalingX:true,
-        stroke:'white',
-    strokeWidth:0.5,
     lockScalingY:true,
-    lockRotation:true,
-fontWeight:'bold'});
-    
-}
+    lockRotation:true
+});
 
+}
+iText1.imageSmoothingEnabled = true;
+ttt.imageSmoothingEnabled = true;
+hash.imageSmoothingEnabled = true;
+number.imageSmoothingEnabled = true;
 canvas.centerObject(iText1);
 canvas.centerObjectH(ttt);
 canvas.calcOffset();
@@ -186,10 +201,18 @@ canvas.add(by);
 canvas.add(ttt);
 canvas.add(hash);
 canvas.add(number);
+
 canvas.renderAll.bind(canvas);
+setTimeout(function(){canvas.renderAll();
+                     }, 500);
 document.getElementById('counter').value=iText1.text.length;
 iText1.on('text:changed', function(e) {
 document.getElementById('counter').value=iText1.text.length;
+    
+    if(iText1.text.length>=140)
+    {
+        alert("Max character limit reached.")
+    }
 
 });
     var cHeight = canvas.getHeight();
@@ -200,10 +223,7 @@ document.getElementById('counter').value=iText1.text.length;
     
 //alert(n2);
 
-var dataURL = canvas.toDataURL({
-  format: 'png',
-  multiplier: n1
-});
+
 function delete1()
 {
 	var r=confirm("Are you sure you want to delete this tale/draft?");
@@ -213,7 +233,7 @@ function delete1()
 	hash.text='#smile';
 	number.text='#000';
 	var b = localStorage.getItem("did");
-	
+	canvas.renderAll();
 	if(b)
 	{
 		
@@ -225,6 +245,7 @@ function delete1()
 	else console.log(10);
 	}
 	else console.log(10);
+
 }
 
 function newcanvas()
@@ -232,6 +253,7 @@ function newcanvas()
 iText1.text='Enter Text';
 hash.text='#smile';
 number.text='#000';
+    canvas.renderAll();
 }
 
 function savedraft() {
