@@ -190,6 +190,8 @@ iText1.imageSmoothingEnabled = true;
 ttt.imageSmoothingEnabled = true;
 hash.imageSmoothingEnabled = true;
 number.imageSmoothingEnabled = true;
+
+canvas.allowTouchScrolling = true;
 canvas.centerObject(iText1);
 canvas.centerObjectH(ttt);
 canvas.calcOffset();
