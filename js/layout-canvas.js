@@ -3,7 +3,10 @@ var canvas = new fabric.Canvas('c');
 // browser viewport size
 	var w = window.innerWidth;
 	var h = window.innerHeight;
+alert(window.innerHeight);
+alert(window.innerWidth);
 //
+
 //	// stage dimensions
 	var ow = 720; // your stage width
 	var oh = 540; // your stage height
