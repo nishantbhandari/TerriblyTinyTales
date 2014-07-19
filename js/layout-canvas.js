@@ -1,28 +1,28 @@
 var canvas = new fabric.Canvas('c');
 
 // browser viewport size
-//	var w = window.innerWidth;
-//	var h = window.innerHeight;
-//alert(window.innerHeight);
-//alert(window.innerWidth);
-////
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+alert(window.innerHeight);
+alert(window.innerWidth);
 //
-////	// stage dimensions
-//	var ow = 720; // your stage width
-//	var oh = 540; // your stage height
-//    	// keep aspect ratio
-//	    var scale = Math.min(w / ow, h / oh);
-////
-////	   	// adjust canvas size
-////    
-////
-//canvas.setWidth(window.innerWidth);
-//canvas.setHeight(300);    
+
+//	// stage dimensions
+	var ow = 720; // your stage width
+	var oh = 540; // your stage height
+    	// keep aspect ratio
+	    var scale = Math.min(w / ow, h / oh);
 //
-//canvas.setWidth(ow * scale);
-//canvas.setHeight(oh * scale);   
-canvas.setWidth(320);
-canvas.setHeight(500);
+//	   	// adjust canvas size
+//    
+////
+canvas.setWidth(window.innerWidth);
+canvas.setHeight(300);    
+
+canvas.setWidth(ow * scale);
+canvas.setHeight(oh * scale);   
+//canvas.setWidth(720);
+//canvas.setHeight(540);
 var width = canvas.getWidth();
 var heigth= canvas.getHeight();   
 var check = localStorage.getItem("did");
