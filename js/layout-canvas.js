@@ -119,7 +119,9 @@ var iText1 = new fabric.IText('Enter Text',{
     fontFamily:'HNUL',
     lockScalingX:true,
     lockScalingY:true,
-    lockRotation:true});
+    lockRotation:true,
+       stroke:'white',
+    strokeWidth:1,});
 
     
 var by = new fabric.Text('by '+author,{
