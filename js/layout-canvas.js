@@ -3,8 +3,7 @@ var canvas = new fabric.Canvas('c');
 // browser viewport size
 	var w = window.innerWidth;
 	var h = window.innerHeight;
-alert(window.innerHeight);
-alert(window.innerWidth);
+
 //
 
 //	// stage dimensions
@@ -128,13 +127,12 @@ var iText1 = new fabric.IText('Enter Text',{
 
     
 var by = new fabric.Text('by '+author,{
-    left:700,
-    top:500,
+    left:720,
+    top:540,
     originX:'right',
-   
     fontSize:20,
     fill:'white',
-       stroke:'white',
+    stroke:'white',
     strokeWidth:1,
     fontFamily:'HNUL',
     lockMovementX: false,
