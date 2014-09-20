@@ -1,0 +1,48 @@
+<html> 
+
+<head>
+<script src="js/fabric.min.js"></script>
+ <script src="js/jquery.min.js"></script>  
+<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+<script type="text/javascript">
+    function AssignValues() {
+        window.localStorage.setItem("name", document.form1.name.value); 
+        window.localStorage.setItem("email", document.form1.email.value); 
+         window.location = "layout.html"
+    }
+    if(window.localStorage.getItem("name")){
+    window.location = "layout.html"
+    
+    
+    }
+</script>
+
+
+
+</head>
+
+<body>
+    <br /><br /> <br /><br />
+<form name="form1">
+<div id="login"> 
+    <h1 class="loginL"> name</h1>
+    <input type="text" name="name" class="loginT" />
+    <h1 class="loginL"> email</h1>
+    <input type="email" name="email" class="loginT" />
+
+
+
+
+ 
+</div>
+<div id="accept">
+
+    <p><a href="javascript:AssignValues();" class="loginB">accept</a></p>
+  
+    </div>
+</form>
+</body>
+
+
+
+</html>
